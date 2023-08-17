@@ -1,0 +1,25 @@
+what is a library?
+	= a place where people checkout books (maybe cds, movies, magazines)
+	= a 3rd place
+	= a government organiation (socialism)
+	= a place where USERS rent BOOKS for a select amount of time (usually 3 weeks + renewal of 3 more weeks st no one else places a hold on the BOOK)
+	= a data base of BOOKS
+
+what is a BOOK?
+	= the voice of a lone soul crying out into the void of time and space for affirmation that the self exists and is valid in existing
+	= a set number of pages
+	= an author
+	= a title
+	= status of read
+	= rating /7
+
+what is a USER?
+	= that's me baby
+	= basically I'm using this as a personal library to record the books I read and their pages, amybe review, idk
+	= other people can suck my capitazlist ass this is my library
+	= okay maybe add support for other users if that sounds fun
+
+what is a DATABASE?
+	= a record of books
+	= a text file read into the program
+	= maybe gen some books / formats with mr. gpt
