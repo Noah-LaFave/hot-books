@@ -41,29 +41,36 @@ std::map<std::string, book> initDataBase(std::string file_name){
     if (file.is_open()){
         std::string line;
         while(std::getline(file, line)){
-            // std::cout << line << "\n";
+            std::cout << "LINE: "<< line << "\n";
             
            std::istringstream ss(line);
            std::string token;
 
             int dir = 0;
-            while (std::getline(ss, token, ',')) {
-                switch (dir)
-                {
-                case 0:
-                    // std::cout << token << "\n";
-                    temp_title = token;
-                    break;
-                case 1:
-                    // std::cout << token << "\n";
-                    temp_auth = token;
-                    break;
-                case 2:
-                    // std::cout << token << "\n";
-                    temp_pages = std::stoi(token);
-                    break;
+            if (line != ""){
+                while (std::getline(ss, token, ',')) {
+                     std::cout << dir << "\n";
+                    switch (dir)
+                    {
+                    case 0:
+                        // std::cout << token << "\n";
+                        temp_title = token;
+                        break;
+                    case 1:
+                        // std::cout << token << "\n";
+                        temp_auth = token;
+                        break;
+                    case 2:
+                        // std::cout << token << "\n";
+                        temp_pages = std::stoi(token);
+                        std::cout <<"db :: "<< temp_title << temp_auth<< temp_pages<< "\n";
+                        db.insert( std::make_pair( temp_title, newBook(temp_title,temp_auth,temp_pages) ) );
+                        break;
+                                                                                                                            
+                    }
+                    dir++;
                 }
-                db.insert( std::make_pair( temp_title, newBook(temp_title,temp_auth,temp_pages) ) );
+                dir =0;
             }
         }
     }
